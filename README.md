@@ -123,10 +123,15 @@ llanura, y el **agua dentro de una excavación minera**.
 
 > Mallado en **elementos finitos por capas**, como el que se arma en FEFLOW para
 > un modelo de despresurización. Las crestas no son círculos escalados sino curvas
-> de nivel de un campo de distancias al cuerpo mineralizado — por eso la
-> excavación se ve excavada y no dibujada. Banco de 15 m, berma de 13,7 m, cara a
-> 65°, rampa de 40 m al 8 %: criterios de Toquepala y Cuajone, no inventados.
-> Y cumple la restricción dura del diseño minero, `D ≈ W_fondo + 2·H/tan(talud)`.
+> de nivel de un campo de distancias al cuerpo mineralizado — por eso la excavación
+> se ve excavada y no dibujada. Banco de 15 m, cara a 65°, ángulo inter-rampa de
+> 42°, rampa de 40 m al 8 %: criterios de Toquepala y Cuajone, no inventados, y
+> cumple la restricción dura `D ≈ W_fondo + 2·H/tan(talud)`.
+>
+> Que se lea como **hueco** y no como cerro depende de un solo signo: la
+> profundidad suma hacia abajo en pantalla. Con el signo correcto la pared lejana
+> abre 10 px por banco y la cercana solo 2 — que es exactamente lo que ve el ojo
+> al asomarse a un agujero. Invertido, se convierte en una montaña.
 
 <br>
 
