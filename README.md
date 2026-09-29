@@ -201,6 +201,9 @@ llanura, y el **agua dentro de una excavación minera**.
 
 ## `$ contact --list`
 
+<a href="https://www.linkedin.com/in/luis-alonzo-contreras-perez">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
 <a href="mailto:luis.contreras@utec.edu.pe">
   <img src="https://img.shields.io/badge/Correo-0EA5E9?style=for-the-badge&logo=gmail&logoColor=white" alt="Correo">
 </a>
