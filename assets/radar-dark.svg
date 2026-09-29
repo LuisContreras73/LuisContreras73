@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="380" viewBox="0 0 440 380" role="img" aria-label="Radar de areas de investigacion">
+<title>Áreas de investigación</title>
+<defs><radialGradient id="hz"><stop offset="0" stop-color="#38BDF8" stop-opacity=".55"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient><linearGradient id="rf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38BDF8" stop-opacity=".40"/><stop offset="1" stop-color="#A78BFA" stop-opacity=".18"/></linearGradient></defs>
+<rect width="440" height="380" rx="12" fill="#111827" stroke="#1E2A3A"/>
+<text x="22" y="28" font-family="ui-monospace,Consolas,monospace" font-size="11.5" font-weight="700" fill="#38BDF8">ÁREAS.RADAR</text>
+<polygon points="220.0,166.5 245.5,181.2 245.5,210.8 220.0,225.5 194.5,210.8 194.5,181.2" fill="none" stroke="#18212B" stroke-width="1"/>
+<polygon points="220.0,137.0 271.1,166.5 271.1,225.5 220.0,255.0 168.9,225.5 168.9,166.5" fill="none" stroke="#18212B" stroke-width="1"/>
+<polygon points="220.0,107.5 296.6,151.8 296.6,240.2 220.0,284.5 143.4,240.3 143.4,151.8" fill="none" stroke="#18212B" stroke-width="1"/>
+<polygon points="220.0,78.0 322.2,137.0 322.2,255.0 220.0,314.0 117.8,255.0 117.8,137.0" fill="none" stroke="#18212B" stroke-width="1"/>
+<line x1="220" y1="196" x2="220.0" y2="78.0" stroke="#18212B"/>
+<line x1="220" y1="196" x2="322.2" y2="137.0" stroke="#18212B"/>
+<line x1="220" y1="196" x2="322.2" y2="255.0" stroke="#18212B"/>
+<line x1="220" y1="196" x2="220.0" y2="314.0" stroke="#18212B"/>
+<line x1="220" y1="196" x2="117.8" y2="255.0" stroke="#18212B"/>
+<line x1="220" y1="196" x2="117.8" y2="137.0" stroke="#18212B"/>
+<polygon points="220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0" fill="url(#rf)" stroke="#38BDF8" stroke-width="2"><animate attributeName="points" from="220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0 220.0,196.0" to="220.0,94.5 301.8,148.8 317.1,252.0 220.0,299.8 136.2,244.4 128.0,142.9" dur="1.5s" begin="0.4s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1"/></polygon>
+<circle cx="220.0" cy="94.5" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<circle cx="301.8" cy="148.8" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<circle cx="317.1" cy="252.0" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<circle cx="220.0" cy="299.8" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<circle cx="136.2" cy="244.4" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<circle cx="128.0" cy="142.9" r="3.2" fill="#38BDF8" opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze"/></circle>
+<g><path d="M 220 196 L 338 196.0 A 118 118 0 0 1 322.4 137.4 Z" fill="url(#hz)"></path><animateTransform attributeName="transform" type="rotate" from="0 220 196" to="360 220 196" dur="6s" repeatCount="indefinite"/></g>
+<text x="220.0" y="47.0" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">Modelos</text>
+<text x="220.0" y="57.0" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">generativos</text>
+<text x="344.7" y="119.0" text-anchor="start" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">World</text>
+<text x="344.7" y="129.0" text-anchor="start" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">models</text>
+<text x="344.7" y="263.0" text-anchor="start" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">Series de</text>
+<text x="344.7" y="273.0" text-anchor="start" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">tiempo</text>
+<text x="220.0" y="335.0" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">Incertidumbre</text>
+<text x="220.0" y="345.0" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">calibrada</text>
+<text x="95.3" y="263.0" text-anchor="end" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">Interpre-</text>
+<text x="95.3" y="273.0" text-anchor="end" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">tabilidad</text>
+<text x="95.3" y="119.0" text-anchor="end" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">Geoespacial</text>
+<text x="95.3" y="129.0" text-anchor="end" font-family="ui-monospace,Consolas,monospace" font-size="8.6" fill="#7C8B9A">y campo</text>
+</svg>
