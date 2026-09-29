@@ -116,15 +116,17 @@ llanura, y el **agua dentro de una excavación minera**.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/tajo-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/tajo-light.svg">
-  <img src="assets/tajo-dark.svg" width="960" alt="Tajo abierto girando: bancos, bermas, rampa de acarreo al 10 % y poza de bombeo">
+  <img src="assets/tajo-dark.svg" width="960" alt="Tajo abierto girando, mallado en elementos finitos: bancos, bermas, rampa de acarreo al 8 % y poza de bombeo">
 </picture>
 
 </div>
 
-> Las crestas no son círculos escalados: son curvas de nivel de un campo de
-> distancias al cuerpo mineralizado, que es lo que hace que un tajo se vea
-> excavado y no dibujado. La rampa da **una sola vuelta** porque el 10 % de
-> pendiente y los 138 m de profundidad no dan para más.
+> Mallado en **elementos finitos por capas**, como el que se arma en FEFLOW para
+> un modelo de despresurización. Las crestas no son círculos escalados sino curvas
+> de nivel de un campo de distancias al cuerpo mineralizado — por eso la
+> excavación se ve excavada y no dibujada. Banco de 15 m, berma de 13,7 m, cara a
+> 65°, rampa de 40 m al 8 %: criterios de Toquepala y Cuajone, no inventados.
+> Y cumple la restricción dura del diseño minero, `D ≈ W_fondo + 2·H/tan(talud)`.
 
 <br>
 
