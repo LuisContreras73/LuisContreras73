@@ -84,8 +84,9 @@ Autoridad Nacional del Agua (2026). En implementación operativa.
 
 ## `$ ./bench --topics`
 
-Lo que investigo y lo que modelo para vivir, en dos piezas: aprender el **operador** en vez de la
-solución, y el agua dentro de una **excavación minera**.
+Tres cosas que modelo, cada una con su simulación corriendo de verdad detrás:
+aprender el **operador** en vez de la solución, el **río** que construye su propia
+llanura, y el **agua dentro de una excavación minera**.
 
 <div align="center">
 
@@ -98,12 +99,32 @@ solución, y el agua dentro de una **excavación minera**.
 <br><br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tajo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/tajo-light.svg">
-  <img src="assets/tajo-dark.svg" width="960" alt="Tajo abierto girando: bancos, rampa de acarreo y poza de bombeo">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rio-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/rio-light.svg">
+  <img src="assets/rio-dark.svg" width="960" alt="Migración de meandros: el río deforma su cauce, corta cuellos y deja lagos en herradura y barras de acreción">
 </picture>
 
 </div>
+
+> Teoría de curva integrada en el tiempo — la migración de cada punto no responde a
+> su curvatura local sino a la de **aguas arriba**, con memoria exponencial. Nadie
+> dibujó los lagos en herradura: aparecen solos cuando un cuello se estrangula.
+> 578 años, 36 cortes, sinuosidad 2,1.
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tajo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/tajo-light.svg">
+  <img src="assets/tajo-dark.svg" width="960" alt="Tajo abierto girando: bancos, bermas, rampa de acarreo al 10 % y poza de bombeo">
+</picture>
+
+</div>
+
+> Las crestas no son círculos escalados: son curvas de nivel de un campo de
+> distancias al cuerpo mineralizado, que es lo que hace que un tajo se vea
+> excavado y no dibujado. La rampa da **una sola vuelta** porque el 10 % de
+> pendiente y los 138 m de profundidad no dan para más.
 
 <br>
 
