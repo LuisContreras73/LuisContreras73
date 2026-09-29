@@ -93,10 +93,20 @@ llanura, y el **agua dentro de una excavación minera**.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/operador-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/operador-light.svg">
-  <img src="assets/operador-dark.svg" width="960" alt="Capa espectral de un operador neuronal: FFT, truncamiento de modos e iFFT">
+  <img src="assets/operador-dark.svg" width="960" alt="Operador neuronal sobre flujo de Darcy: de un campo de conductividad hidráulica a su campo de carga, con la capa espectral en medio">
 </picture>
 
-<br><br>
+</div>
+
+> El benchmark canónico de los operadores neuronales es, literalmente, flujo
+> subterráneo: `−∇·(K∇h) = 0`. El operador aprende el mapa **entre funciones**
+> — le das un campo de conductividad entero y devuelve el campo de carga entero,
+> no una solución concreta. Los cuatro campos `K` son realizaciones log-normales
+> y cada `h` está **resuelto de verdad** por diferencias finitas con media
+> armónica en las caras; las líneas de flujo se agolpan solas en los canales
+> permeables.
+
+<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rio-dark.svg">
