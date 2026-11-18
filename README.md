@@ -1,6 +1,5 @@
 <div align="center">
 
-<!-- BANNER · nube de puntos que recorre cuatro transformaciones -->
 <a href="https://github.com/LuisContreras73">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
@@ -9,36 +8,30 @@
   </picture>
 </a>
 
-<a href="https://github.com/LuisContreras73">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=25&duration=2800&pause=900&color=0EA5E9&center=true&vCenter=true&width=900&lines=Luis+A.+Contreras+%E2%80%94+Data+Scientist;Recursos+h%C3%ADdricos+%7C+Hidroinform%C3%A1tica;Neural+Operators+%E2%80%A2+Generative+%E2%80%A2+World+Models" alt="Data Scientist en recursos hídricos e hidroinformática">
-</a>
-
 </div>
 
-**Data Scientist** especializado en **recursos hídricos**. Ingeniero ambiental de formación.
-Construyo modelos de agua que se pueden **verificar**: pronóstico de caudal, hidrogeología
-numérica y aprendizaje de operadores, con el sensor en campo contrastando lo que el modelo
-prometió.
+Soy ingeniero ambiental y trabajo como Data Scientist en recursos hídricos. Desarrollo modelos
+de agua que se puedan verificar: pronóstico de caudal, hidrogeología numérica y aprendizaje de
+operadores. Me interesa que cada modelo se contraste con una medición en campo.
 
 ---
 
-## `$ ls -la proyectos/`
+## HidroAlerta Chancay–Huaral
 
-### 🏆 HidroAlerta Chancay–Huaral
-
-Pronóstico de caudal y alerta temprana en una cuenca andina. **Tres modelos, uno por escala de decisión:**
+Sistema de pronóstico de caudal y alerta temprana para una cuenca andina. Usa tres modelos,
+uno por escala de decisión:
 
 | Modelo | Plazo | Acierto |
 |---|---|---|
-| **HydroST** — atención espacial sobre 9 subcuencas | 1 día | NSE **0,97** |
-| **TFT canónico + GRU** — subestacional | 14 días | NSE **0,76** |
-| **LightGBM cuantílico** — disponibilidad | 1 mes | KGE **0,77** |
+| **HydroST**, atención espacial sobre 9 subcuencas | 1 día | NSE **0,97** |
+| **TFT canónico + GRU**, subestacional | 14 días | NSE **0,76** |
+| **LightGBM cuantílico**, disponibilidad | 1 mes | KGE **0,77** |
 
-No entrega un número: entrega una **banda P10–P90** que después se contrasta contra el nivel
-que mide un nodo IoT propio en campo. Aguanta **30 días sin telemetría** perdiendo solo 0,07 de NSE.
+El resultado es una banda P10–P90, que se contrasta con el nivel que mide un nodo IoT propio en
+campo. El sistema tolera 30 días sin telemetría con una pérdida de solo 0,07 de NSE.
 
-🥇 **1.er puesto** — Concurso de Ciencia y Tecnología para la Seguridad Hídrica,
-Autoridad Nacional del Agua (2026). En implementación operativa.
+1.er puesto en el Concurso de Ciencia y Tecnología para la Seguridad Hídrica de la
+Autoridad Nacional del Agua (2026). Está en implementación operativa.
 
 [`código`](https://github.com/LuisContreras73/hidroalerta-chancay-huaral) ·
 [`visor en vivo`](https://luiscontreras73.github.io/hidroalerta-dashboard)
@@ -48,24 +41,20 @@ Autoridad Nacional del Agua (2026). En implementación operativa.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/inference-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/inference-light.svg">
-  <img src="assets/inference-dark.svg" width="960" alt="Inferencia: el modelo emite una banda P10–P90 y el caudal medido cae dentro el 82 % de los días del evento de 2024">
+  <img src="assets/inference-dark.svg" width="960" alt="Banda de predicción P10–P90 y caudal medido durante el evento de 2024; el caudal cae dentro de la banda el 82,5 % de los días">
 </picture>
 
 </div>
 
-> En los 80 días del evento de enero–marzo de 2024 el caudal medido cayó dentro de la banda
-> P10–P90 el **82,5 %** de las veces, contra el 80 % nominal. Fuera de eventos la banda queda
-> corta y el modelo es sobre-confiado: está medido, está cuantificado y está en el informe.
+En los 80 días del evento de enero a marzo de 2024, el caudal medido cayó dentro de la banda
+P10–P90 el **82,5 %** de las veces, frente al 80 % nominal. Fuera de eventos la banda resulta
+corta y el modelo es sobreconfiado; esa limitación está documentada en el informe.
 
-### 📡 En curso
+En curso: modelos del mundo (*world models*) para dinámica de sistemas físicos, escalado
+multicuenca con CAMELS-PE (136 cuencas peruanas) y operativización de HidroAlerta con la ALA
+Chancay–Huaral.
 
-- **World models** para dinámica de sistemas físicos
-- Escalado multi-cuenca con **CAMELS-PE** (136 cuencas peruanas)
-- Operativización de HidroAlerta con la ALA Chancay–Huaral
-
-<br>
-
-## `$ ./inspect --model HydroST --show attention`
+### Atención espacial de HydroST
 
 <div align="center">
   <picture>
@@ -75,36 +64,62 @@ Autoridad Nacional del Agua (2026). En implementación operativa.
   </picture>
 </div>
 
-> Nadie le dijo al modelo dónde nace el agua. Cuando llega una crecida, la atención espacial se
-> desplaza del valle a las tres subcuencas de cabecera sobre los 4 000 m — **del 37 % al 48 %** —
-> que son justo las que aportan el 56 % del caudal.
-> Pesos reales extraídos de los checkpoints, no una ilustración.
+Durante una crecida, la atención espacial del modelo pasa del valle a las tres subcuencas de
+cabecera sobre los 4 000 m, del 37 % al 48 %. Esas subcuencas aportan el 56 % del caudal. Los
+pesos provienen de los checkpoints entrenados.
 
-<br>
+---
 
-## `$ ./bench --topics`
+## Investigación actual
 
-Tres cosas que modelo, cada una con su simulación corriendo de verdad detrás:
-aprender el **operador** en vez de la solución, el **río** que construye su propia
-llanura, y el **agua dentro de una excavación minera**.
+Trabajo en operadores neuronales y diseño generativo para la recarga de manantiales afectados
+por minería. El operador aproxima el flujo subterráneo para explorar muchas alternativas de
+diseño con rapidez. Cada alternativa seleccionada se verifica con una simulación en MODFLOW 6.
+El motor de simulación corre en GPU.
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/operador-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/operador-light.svg">
-  <img src="assets/operador-dark.svg" width="960" alt="Operador neuronal sobre flujo de Darcy: de un campo de conductividad hidráulica a su campo de carga, con la capa espectral en medio">
-</picture>
+<img src="assets/tajo.gif" width="900" alt="Bloque hidrogeológico de un tajo a cielo abierto: relieve con imagen satelital, geología en las caras del corte y lago de cierre que sube dentro del tajo">
+
+<sub>Bloque hidrogeológico de un tajo a cielo abierto en los Andes del sur: geología, nivel freático y lago de cierre.
+Datos públicos de expedientes ambientales; modelo en MODFLOW 6 con motor en GPU.
+Imagen: contiene datos modificados de Copernicus Sentinel, 2024.</sub>
 
 </div>
 
-> El benchmark canónico de los operadores neuronales es, literalmente, flujo
-> subterráneo: `−∇·(K∇h) = 0`. El operador aprende el mapa **entre funciones**
-> — le das un campo de conductividad entero y devuelve el campo de carga entero,
-> no una solución concreta. Los cuatro campos `K` son realizaciones log-normales
-> y cada `h` está **resuelto de verdad** por diferencias finitas con media
-> armónica en las caras; las líneas de flujo se agolpan solas en los canales
-> permeables.
+---
+
+## Operadores neuronales y grafos
+
+El flujo subterráneo en medio heterogéneo, `−∇·(K∇h) = 0`, es un problema de referencia para
+operadores neuronales. En lugar de una solución concreta, el operador aprende la aplicación que
+lleva un campo de conductividad `K` completo a su campo de carga `h`. En la animación, cada `h`
+se resuelve por diferencias finitas con media armónica en las caras de las celdas.
+
+<div align="center">
+
+<img src="assets/operador.gif" width="900" alt="Tres campos de conductividad K log-normal y su campo de carga h con equipotenciales">
+
+</div>
+
+Una malla de simulación es también un grafo: las celdas son nodos y las caras compartidas son
+aristas. Cada cara tiene una conductancia `C_ij = K a_ij / d_ij`, y la fracción `π_ij = C_ij / Σ_k C_ik`
+indica qué parte de lo que sale de la celda `i` pasa a la vecina `j`. Como las fracciones de cada
+celda suman 1, el reparto conserva la masa por construcción. La animación usa celdas de la malla
+del modelo con K uniforme; la suma total se calcula en cada fotograma.
+
+<div align="center">
+
+<img src="assets/grafo.gif" width="900" alt="Celdas de la malla como grafo: fracción π por cara y reparto del flujo entre vecinas con suma total constante">
+
+</div>
+
+## Migración de meandros
+
+Simulación con la teoría de curva integrada en el tiempo: la migración de cada punto depende de
+la curvatura aguas arriba, con memoria exponencial. Los lagos en herradura se forman cuando se
+estrangula un cuello. La simulación cubre 578 años, con 36 cortes de meandro y una sinuosidad
+de 2,1.
 
 <div align="center">
 
@@ -116,90 +131,89 @@ llanura, y el **agua dentro de una excavación minera**.
 
 </div>
 
-> Teoría de curva integrada en el tiempo — la migración de cada punto no responde a
-> su curvatura local sino a la de **aguas arriba**, con memoria exponencial. Nadie
-> dibujó los lagos en herradura: aparecen solos cuando un cuello se estrangula.
-> 578 años, 36 cortes, sinuosidad 2,1.
+---
+
+## PokeGAN
+
+GAN condicional que genera criaturas en pixel art, de frente y de espalda, a partir de su tipo
+(vector multi-hot de 18 tipos). El generador es de estilo BigGAN, con un tronco compartido y dos
+cabezas. El discriminador es de proyección y se complementa con un término antagónico por pares.
+Se entrenó con 7 739 pares en unas 3,5 horas en una GPU.
+
+Coherencia entre frente y espalda de 0,93 y diversidad de 0,88 respecto a las imágenes reales.
+KID×10³ de 24,0 (frente) y 42,8 (espalda); con un discriminador auxiliar ConvNeXt-T, 16,2 y 17,4.
+La demo corre en el navegador con ONNX Runtime Web.
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tajo-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/tajo-light.svg">
-  <img src="assets/tajo-dark.svg" width="960" alt="Tajo abierto girando, mallado en elementos finitos: bancos, bermas, rampa de acarreo al 8 % y poza de bombeo">
-</picture>
+<img src="assets/pokegan.gif" width="900" alt="Paseo por el espacio latente de PokeGAN: criaturas de seis tipos, de frente y de espalda">
 
 </div>
 
-> Mallado en **elementos finitos por capas**, como el que se arma en FEFLOW para
-> un modelo de despresurización. Las crestas no son círculos escalados sino curvas
-> de nivel de un campo de distancias al cuerpo mineralizado — por eso la excavación
-> se ve excavada y no dibujada. Banco de 15 m, cara a 65°, ángulo inter-rampa de
-> 42°, rampa de 40 m al 8 %: criterios de Toquepala y Cuajone, no inventados, y
-> cumple la restricción dura `D ≈ W_fondo + 2·H/tan(talud)`.
->
-> Que se lea como **hueco** y no como cerro depende de un solo signo: la
-> profundidad suma hacia abajo en pantalla. Con el signo correcto la pared lejana
-> abre 10 px por banco y la cercana solo 2 — que es exactamente lo que ve el ojo
-> al asomarse a un agujero. Invertido, se convierte en una montaña.
+[`código`](https://github.com/LuisContreras73/pokegan) ·
+[`demo`](https://luiscontreras73.github.io/pokegan/)
 
-<br>
+---
 
-<div align="center">
+## Otros proyectos
 
-## `$ cat stack.yaml`
+- [`olas-de-calor-peru-utec`](https://github.com/LuisContreras73/olas-de-calor-peru-utec) — Olas de calor, IA y salud pública en el Perú: pieza interactiva de visualización de datos, del pronóstico global a 1 km (UTEC, 2026).
+  [`pieza interactiva`](https://luiscontreras73.github.io/olas-de-calor-peru-utec/)
+- [`music-generation`](https://github.com/LuisContreras73/music-generation) — Modelos autorregresivos generativos sobre música simbólica de piano: 16 experimentos, cuatro familias de arquitectura, mismo corpus y mismo protocolo. Predecir mejor no es generar mejor.
+- [`overcooked-final`](https://github.com/LuisContreras73/overcooked-final) — Agente Overcooked-AI, proyecto final de Deep Learning.
+- [`lab4-planning-llm`](https://github.com/LuisContreras73/lab4-planning-llm) — Laboratorio 4: planificación multipaso con Qwen3-8B (Hyperion.net).
+- [`hidroalerta-dashboard`](https://github.com/LuisContreras73/hidroalerta-dashboard) — visor de HidroAlerta.
 
-<table border="1" cellpadding="14">
-  <thead>
-    <tr><th colspan="2" align="left"><code>luis@lima:~$ cat stack.yaml</code></th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td width="50%" valign="top"><code>├─ ∫ operadores_neuronales:</code><br><br>
-        <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch">
-        <img src="https://cdn.simpleicons.org/numpy/0EA5E9" height="48" alt="NumPy">
-        <img src="https://cdn.simpleicons.org/scipy/0EA5E9" height="48" alt="SciPy"><br>
-        <sub><code>FNO · DeepONet · Neural ODE · G: a(x) ↦ u(x)</code></sub>
-      </td>
-      <td width="50%" valign="top"><code>├─ ◆ generativos:</code><br><br>
-        <img src="https://cdn.simpleicons.org/huggingface/0EA5E9" height="48" alt="Hugging Face">
-        <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch">
-        <img src="https://cdn.simpleicons.org/nvidia/0EA5E9" height="48" alt="NVIDIA"><br>
-        <sub><code>Diffusion · VAE · Flow Matching</code></sub>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top"><code>├─ ⬡ transformers_y_grafos:</code><br><br>
-        <img src="https://cdn.simpleicons.org/huggingface/0EA5E9" height="48" alt="Hugging Face">
-        <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch Geometric">
-        <img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn"><br>
-        <sub><code>Attention · GNN (GCN/GAT) · TFT · conformal</code></sub>
-      </td>
-      <td valign="top"><code>├─ ⌬ hidrogeologia_y_fisica:</code><br><br>
-        <code>∇·(K∇h) = S<sub>s</sub> ∂h/∂t</code><br><br>
-        <sub><code>FEFLOW · MODFLOW · GR4J · PINNs · balance hídrico</code></sub>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top"><code>├─ ▤ datos_y_geoespacial:</code><br><br>
-        <img src="https://skillicons.dev/icons?i=python,postgres" alt="Python, PostgreSQL">
-        <img src="https://cdn.simpleicons.org/duckdb/0EA5E9" height="48" alt="DuckDB">
-        <img src="https://cdn.simpleicons.org/googleearthengine/0EA5E9" height="48" alt="Google Earth Engine">
-        <img src="https://cdn.simpleicons.org/qgis/0EA5E9" height="48" alt="QGIS"><br>
-        <sub><code>SQL · DuckDB · xarray · Earth Engine · QGIS · rasterio</code></sub>
-      </td>
-      <td valign="top"><code>╰─ ⚙ ingenieria_y_campo:</code><br><br>
-        <img src="https://skillicons.dev/icons?i=linux,git,docker,arduino" alt="Linux, Git, Docker, Arduino">
-        <img src="https://cdn.simpleicons.org/espressif/0EA5E9" height="48" alt="ESP32"><br>
-        <sub><code>Arch · Ubuntu · Git · Docker · ESP32 · LoRa · KiCad</code></sub>
-      </td>
-    </tr>
-  </tbody>
+---
+
+## Herramientas
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><b>Operadores neuronales</b><br><br>
+      <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch">
+      <img src="https://cdn.simpleicons.org/numpy/0EA5E9" height="48" alt="NumPy">
+      <img src="https://cdn.simpleicons.org/scipy/0EA5E9" height="48" alt="SciPy"><br>
+      <sub>FNO · DeepONet · Neural ODE</sub>
+    </td>
+    <td width="50%" valign="top"><b>Modelos generativos</b><br><br>
+      <img src="https://cdn.simpleicons.org/huggingface/0EA5E9" height="48" alt="Hugging Face">
+      <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch">
+      <img src="https://cdn.simpleicons.org/nvidia/0EA5E9" height="48" alt="NVIDIA"><br>
+      <sub>Diffusion · VAE · Flow Matching · GAN</sub>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Transformers y grafos</b><br><br>
+      <img src="https://cdn.simpleicons.org/huggingface/0EA5E9" height="48" alt="Hugging Face">
+      <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch Geometric">
+      <img src="https://skillicons.dev/icons?i=sklearn" alt="scikit-learn"><br>
+      <sub>Attention · GNN (GCN/GAT) · TFT · conformal</sub>
+    </td>
+    <td valign="top"><b>Hidrogeología y física</b><br><br>
+      <code>∇·(K∇h) = S<sub>s</sub> ∂h/∂t</code><br><br>
+      <sub>FEFLOW · MODFLOW · GR4J · PINNs · balance hídrico</sub>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Datos y geoespacial</b><br><br>
+      <img src="https://skillicons.dev/icons?i=python,postgres" alt="Python, PostgreSQL">
+      <img src="https://cdn.simpleicons.org/duckdb/0EA5E9" height="48" alt="DuckDB">
+      <img src="https://cdn.simpleicons.org/googleearthengine/0EA5E9" height="48" alt="Google Earth Engine">
+      <img src="https://cdn.simpleicons.org/qgis/0EA5E9" height="48" alt="QGIS"><br>
+      <sub>SQL · DuckDB · xarray · Earth Engine · QGIS · rasterio</sub>
+    </td>
+    <td valign="top"><b>Ingeniería y campo</b><br><br>
+      <img src="https://skillicons.dev/icons?i=linux,git,docker,arduino" alt="Linux, Git, Docker, Arduino">
+      <img src="https://cdn.simpleicons.org/espressif/0EA5E9" height="48" alt="ESP32"><br>
+      <sub>Arch · Ubuntu · Git · Docker · ESP32 · LoRa · KiCad</sub>
+    </td>
+  </tr>
 </table>
 
-<br>
+---
 
-## `$ contact --list`
+## Contacto
 
 <a href="https://www.linkedin.com/in/luis-alonzo-contreras-perez">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
@@ -213,9 +227,3 @@ llanura, y el **agua dentro de una excavación minera**.
 <a href="https://github.com/LuisContreras73">
   <img src="https://img.shields.io/badge/GitHub-0B0F17?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
 </a>
-
-<br><br>
-
-<sub><code>« Un modelo que no se puede falsar no es un modelo. »</code></sub>
-
-</div>
